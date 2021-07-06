@@ -33,16 +33,41 @@ body{
     margin: 0 auto;
 }
 img{        max-width: 100%;}
+.imagen{    width: 80%;}
+
 
 h1,h2,h3,h4{
     font-weight: 300;
     margin: 1rem 0;
+    text-transform: uppercase;
+    color: var(--verde);
+    text-shadow: 1px 1px var(--azul);
 }
 h1{         font-size: 2.5rem;}
+h2{         font-size: 2.2rem;}
+h3{         font-size: 2rem;}
 p {         
     line-height: 2rem;
     font-size: 1.2rem;
     font-weight: 300;
+}
+
+.boton{
+    background-color: var(--turquesa);
+    display: block;
+    padding: var(--paddUn);
+    text-align: center;
+    color:var(--suave);
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-box-shadow: 4px 4px 3px -2px rgba(6,214,160,0.55); 
+    box-shadow: 4px 4px 3px -2px rgba(6,214,160,0.55);
+    border: 1px solid var(--turquesa);
+    transition: all .25s ease-in-out;
+}
+.boton:hover{
+    background-color: var(--blanco);
+    color: var(--turquesa);
 }
 
 /*HEADER*/
@@ -108,5 +133,49 @@ p {
 .contenido-nosotros{
     display: grid;
     align-content: center;
+}
 
+/*VENTA*/
+.venta{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.venta  img {
+    width: 100%;
+}
+
+.destacado{
+    /* grid-row: 1/3; */
+    grid-column: 1/4;
+    /* grid-template-columns: repeat(2, 1fr);
+    display: grid; */
+
+}
+@media(min-width:768px){
+    .venta{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+.card{
+    background-color: var(--blanco);
+    padding: var(--paddUn);
+    border: 1px solid var(--turquesa);
+    /* border-radius: 0px 0px 10px 10px var(--azul); */
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.anuncio .precio{
+    font-size: 1.6rem;
+    font-weight: 450;
+}
+
+.precio span{
+    color: var(--azul);
 }
