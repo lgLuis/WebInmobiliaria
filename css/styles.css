@@ -179,3 +179,50 @@ p {
 .precio span{
     color: var(--azul);
 }
+
+.footer{
+    background-color: var(--verde);
+    margin-top: var(--paddDos);
+    padding-top: var(--paddDos);
+    color: var(--suave);
+}
+.footer h3{
+    color: var(--blanco);
+}
+.footer img{
+    max-width: 140px;
+}
+
+@media(min-width:768px){
+    .footer .contenedor{
+        display: grid;
+        grid-template-columns: 30% 20% 2fr;
+        gap: var(--paddUn);
+    }
+}
+.footer .widget h3{
+    margin-bottom: 3rem;
+}
+
+.footer .navegacion a{
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.footer .contenedor-casas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.casa{
+    border-bottom: 1px solid var(--azul);
+    margin: 0.5rem;
+}
+.copyright{
+    color: var(--suave);
+    text-shadow: 1px 1px var(--azul);
+    text-align: center;
+    padding: var(--paddDos);
+}
